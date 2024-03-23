@@ -113,6 +113,12 @@ $result = $conn->query($sql);
 							</a>
 						</li>
 						<li class="nav-item">
+							<a href="review_admin.php" class="nav-link">
+								<i class="nav-icon  fas fa-users"></i>
+								<p>Reviews</p>
+							</a>
+						</li>
+						<li class="nav-item">
 							<a href="pages.html" class="nav-link">
 								<i class="nav-icon  far fa-file-alt"></i>
 								<p>Pages</p>
@@ -138,9 +144,13 @@ $result = $conn->query($sql);
 					<div class="row">
 						<div class="col-lg-4 col-6">
 							<div class="small-box card">
-								<div class="inner">
-									<h3>150</h3>
-									<p>Total Orders</p>
+								<div class="inner text-center">
+									<?php
+									$select_users = mysqli_query($conn, "SELECT * FROM `users` ") or die('query faild');
+									$number_of_users = mysqli_num_rows($select_users);
+									?>
+									<h3><?php echo $number_of_users; ?></h3>
+									<p>Total Users</p>
 								</div>
 								<div class="icon">
 									<i class="ion ion-bag"></i>
@@ -151,14 +161,14 @@ $result = $conn->query($sql);
 
 						<div class="col-lg-4 col-6">
 							<div class="small-box card">
-								<div class="inner">
+								<div class="inner text-center">
 									<?php
-									$select_users = mysqli_query($conn, "SELECT * FROM `users` ") or die('query faild');
+									$select_users = mysqli_query($conn, "SELECT * FROM `testimonials` ") or die('query faild');
 									$number_of_users = mysqli_num_rows($select_users);
 									?>
 									<h3><?php echo $number_of_users; ?></h3>
 
-									<p>Total Customers</p>
+									<p>Total Reviews</p>
 								</div>
 								<div class="icon">
 									<i class="ion ion-stats-bars"></i>
