@@ -10,7 +10,7 @@ include('login_check.php');
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>UpConstruction Bootstrap Template - Index</title>
+    <title>Battery Low Interactive - Home</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -34,6 +34,8 @@ include('login_check.php');
     <!-- Template Main CSS File -->
     <link href="frontend/main.css" rel="stylesheet">
 
+    <link rel="shortcut icon" href="/frontend/img/logo_1-removebg-preview.png" type="image/x-icon">
+
 </head>
 
 <body>
@@ -42,7 +44,7 @@ include('login_check.php');
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
             <a href="index.php" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="frontend/img/logo.png" alt=""> -->
+                <!-- <img src="frontend/img/logo_1-removebg-preview.png" alt="Battery Low Interactive" width="200" height="150"> -->
                 <h1 id="logo">Battery Low Interactive<span>.</span></h1>
             </a>
 
@@ -52,7 +54,7 @@ include('login_check.php');
                 <ul>
                     <li><a href="index.php" class="active">Home</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
 
@@ -198,7 +200,7 @@ include('login_check.php');
                             </div>
                             <h3>Web Development</h3>
                             <p>Websites are the prerequisite of almost anything in present world. A website symbolizes the very identity of something. Since the days of working as freelancers, we have taken part in the development of many websites. These include an array of static and dynamic websites for a variety of different purposes.</p>
-                            <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                            <a href="" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- End Service Item -->
@@ -210,7 +212,7 @@ include('login_check.php');
                             </div>
                             <h3>GAME DEVELOPMENT</h3>
                             <p>Game development has been our comfort zone and ultimate strength. Starting from traditional mobile games, we went on building PC platform games and won awards with them. We introduced new technologies like AR and VR in their full potential in the game industry of Bangladesh.</p>
-                            <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                            <a href="" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- End Service Item -->
@@ -223,7 +225,7 @@ include('login_check.php');
                             </div>
                             <h3>CREATIVE MARKETING</h3>
                             <p>As a creative agency, we help transform corporations into icons. Brands into heroes. Companies into stories worth telling. What we do goes far beyond branding identity, and taps into the very DNA that makes your offering special.</p>
-                            <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                            <a href="" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- End Service Item -->
@@ -235,7 +237,7 @@ include('login_check.php');
                             </div>
                             <h3>INVENTORY MANAGEMENT</h3>
                             <p>Any company having its own products need an inventory. Any modern system or company should have its own inventory management system. Our expertise in this sector has enabled us to build easy to access and secured inventory management systems.</p>
-                            <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                            <a href="" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- End Service Item -->
@@ -247,7 +249,7 @@ include('login_check.php');
                             </div>
                             <h3>ERP</h3>
                             <p>Enterprise Resource Planning software is one basic need for any business now-a-days. We understand the need of a simple and in-depth ERP solution system. To address the different kinds of needs of different business organizations, we provide custom ERP solutions which sooths them best.</p>
-                            <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                            <a href="" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- End Service Item -->
@@ -260,7 +262,7 @@ include('login_check.php');
                             </div>
                             <h3>APPLICATION DEVELOPMENT</h3>
                             <p>Starting with our in house application, we have worked on a number of applications of corporate clients and several competitions. From generating idea to planning and all the way to finish implementation is done by us.</p>
-                            <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                            <a href="" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- End Service Item -->
@@ -302,7 +304,7 @@ include('login_check.php');
 
                 <div class="section-header">
                     <h2>Testimonials</h2>
-                    <p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti</p>
+                    <p>Here are some testimonials from our satisfied clients. We take pride in delivering exceptional services and exceeding our clients' expectations. Read on to see what they have to say about their experience working with us.</p>
                 </div>
 
                 <div class="slides-2 swiper">
@@ -327,22 +329,21 @@ include('login_check.php');
 
                     <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up">
                         <div class="content">
-                            <h3>Minus hic non reiciendis ea possimus at quia.</h3>
-                            <p>Rem id rerum. Debitis deserunt quidem delectus expedita ducimus dolor. Aut iusto ipsa. Eos ipsum nobis ipsa soluta itaque perspiciatis fuga ipsum perspiciatis. Eum amet fugiat totam nisi possimus ut delectus dicta.
-                            <p>Aliquam velit deserunt autem. Inventore et saepe. Tenetur suscipit eligendi labore culpa eos. Deserunt porro magni qui necessitatibus dolorem at animi cupiditate.</p>
+                            <h3>About Us</h3>
+                            <p>One of the first and foremost exponents of AR and VR technologies in Bangladesh. Web, app and game development as well as creative marketing is also our forte.
+                            <p>We make sure that our products and services enhance your identity in the professional world.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-5" data-aos="fade">
                         <!-- Alert message -->
                         <div id="alertMessage" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
-                            <strong>Success!</strong> Your quote request has been sent successfully. Thank you!
+                            <strong>Success!</strong> Your message has been recived successfully. Thank you!
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
 
                         <form id="quoteForm" action="submit_contact.php" method="post" class="php-email-form">
-                            <h3>Get a quote</h3>
-                            <p>Vel nobis odio laboriosam et hic voluptatem. Inventore vitae totam. Rerum repellendus enim linead sero park flows.</p>
+                            <h3>Contact Us</h3>
                             <div class="row gy-3">
                                 <div class="col-md-12">
                                     <input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
@@ -375,12 +376,17 @@ include('login_check.php');
         <div class="footer-content position-relative">
             <div class="container">
                 <div class="row">
+                    <div class="col-lg-2 col-md-3 footer-links">
+                        <img src="frontend/img/logo_1.jpg" alt="" class="img-fluid">
+                    </div>
+                    <!-- End footer links column-->
+
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-info">
                             <h3>Battery Low Interactive</h3>
-                            <p>
-                                A108 Adam Street <br> NY 535022, USA<br><br>
-                                <strong>Phone:</strong> +1 5589 55488 55<br>
+                            <p>House - 8, Road - 2, Block - J,
+                                <br> Baridhara, Dhaka 1212, Bangladesh<br><br>
+                                <strong>Phone:</strong> +880 1521 112329<br>
                                 <strong>Email:</strong> info@batterylowinteractive.com<br>
                             </p>
                             <div class="social-links d-flex mt-3">
@@ -429,17 +435,6 @@ include('login_check.php');
                     </div>
                     <!-- End footer links column-->
 
-                    <div class="col-lg-2 col-md-3 footer-links">
-                        <h4>Additional Links</h4>
-                        <ul>
-                            <li><a href="#">Link 1</a></li>
-                            <li><a href="#">Link 2</a></li>
-                            <li><a href="#">Link 3</a></li>
-                            <li><a href="#">Link 4</a></li>
-                            <li><a href="#">Link 5</a></li>
-                        </ul>
-                    </div>
-                    <!-- End footer links column-->
                 </div>
             </div>
         </div>
@@ -459,8 +454,13 @@ include('login_check.php');
 
     <div id="preloader "></div>
 
+
+
+
+
     <!-- Template Main JS File -->
     <script src="frontend/main.js "></script>
+
 
 
 
@@ -473,6 +473,8 @@ include('login_check.php');
     <script src="frontend/vendor/swiper/swiper-bundle.min.js "></script>
     <script src="frontend/vendor/purecounter/purecounter_vanilla.js "></script>
     <script src="frontend/vendor/php-email-form/validate.js "></script>
+
+
 
 </body>
 

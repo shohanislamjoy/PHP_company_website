@@ -4,15 +4,7 @@ if (!$userLoggedIn) {
     header("location:login.php");
     exit();
 }
-// Database configuration
-include('connection.php');
-
-// Fetch data from the database
-$sql = "SELECT * FROM testimonials";
-$result = $conn->query($sql);
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,12 +70,6 @@ $result = $conn->query($sql);
             </ul>
         </nav>
         <!-- /.navbar -->
-
-
-
-
-
-
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
@@ -144,56 +130,88 @@ $result = $conn->query($sql);
 
 
 
-
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
+            <!-- Main content -->
+            <section class="content">
+                <div class="container mt-5">
+                    <h2 class="mb-4">User Management</h2>
+                    <?php
+                    // Include your database connection file and any necessary configurations
+                    include 'connection.php';
 
-            <div class="container mt-5">
-                <!-- reviwers -->
+                    // Function to delete user
+                    function deleteUser($conn, $id)
+                    {
+                        $sql = "DELETE FROM users WHERE id=?";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->bind_param("i", $id);
+                        $stmt->execute();
+                        $stmt->close();
+                        return true;
+                    }
 
-                <div class="piechart m-4" id="piechart" style="height: 500px; width: 100%;"></div>
+                    // Check if form is submitted for deletion
+                    if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["delete_id"])) {
+                        $delete_id = $_POST["delete_id"];
+                        if (deleteUser($conn, $delete_id)) {
+                            echo '<div class="alert alert-success" role="alert">User deleted successfully!</div>';
+                        } else {
+                            echo '<div class="alert alert-danger" role="alert">Error deleting user!</div>';
+                        }
+                    }
 
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Occupation</th>
-                                <th>Rating</th>
-                                <th>Message</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            while ($row = $result->fetch_assoc()) {
-                                echo '<tr>';
-                                echo '<td>' . $row["name"] . '</td>';
-                                echo '<td>' . $row["occupation"] . '</td>';
-                                echo '<td>' . $row["rating"] . '</td>';
-                                echo '<td>' . $row["message"] . '</td>';
-                                echo '<td><a href="delete_review.php?id=' . $row["id"] . '">Delete</a></td>';
-                                echo '</tr>';
-                            }
+                    // Fetch all users from the database
+                    $sql = "SELECT * FROM users";
+                    $result = $conn->query($sql);
 
+                    if ($result->num_rows > 0) {
+                    ?>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php while ($row = $result->fetch_assoc()) { ?>
+                                    <tr>
+                                        <td><?php echo $row["name"]; ?></td>
+                                        <td><?php echo $row["email"]; ?></td>
+                                        <td><?php echo $row["phone"]; ?></td>
+                                        <td>
+                                            <!-- Edit Button -->
+                                            <a href="edit_user.php?id=<?php echo $row["id"]; ?>" class="btn btn-primary btn-sm">Edit</a>
 
-                            ?>
-                        </tbody>
-                    </table>
+                                            <!-- Delete Button -->
+                                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" style="display: inline;">
+                                                <input type="hidden" name="delete_id" value="<?php echo $row["id"]; ?>">
+                                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this user?')">Delete</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    <?php } else { ?>
+                        <p>No users found.</p>
+                    <?php } ?>
                 </div>
 
 
-            </div>
-
-
-
         </div>
+
+        </section>
+        <!-- /.content -->
+
         <!-- /.content-wrapper -->
         <footer class="main-footer">
 
-            <strong>Copyright &copy; Battery Low Interactive All rights reserved.
+            <strong>Copyright &copy; Battery Low InteractiveAll rights reserved.
         </footer>
-
     </div>
     <!-- ./wrapper -->
     <!-- jQuery -->
@@ -204,73 +222,12 @@ $result = $conn->query($sql);
     <script src="frontend/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="frontend/js/demo.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script>
-        google.charts.load('current', {
-            'packages': ['corechart']
-        });
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            <?php
-            // Fetch data from the testimonials table
-            $sql_1 = "SELECT rating, COUNT(*) AS count FROM testimonials GROUP BY rating";
-            $result_1 = $conn->query($sql_1);
-
-            // Initialize an array to store the rating counts
-            $ratingCounts = array();
-
-            if ($result_1->num_rows > 0) {
-                // Loop through the results and store the counts in the array
-                while ($row = $result_1->fetch_assoc()) {
-                    $rating = $row["rating"];
-                    $count = $row["count"];
-                    $ratingCounts[$rating] = $count;
-                }
-                // Fill in missing rating counts with zero
-                for ($i = 1; $i <= 5; $i++) {
-                    if (!isset($ratingCounts[$i])) {
-                        $ratingCounts[$i] = 0;
-                    }
-                }
-                // Sort the array by keys (ratings)
-                ksort($ratingCounts);
-            } else {
-                echo "No testimonials found.";
-            }
-
-            // Close the database connection
-            $conn->close();
-
-            // Convert the rating counts array to a format suitable for JavaScript
-            $data = array();
-            $data[] = ['Task', 'Count'];
-            foreach ($ratingCounts as $rating => $count) {
-                $data[] = ["$rating stars", $count];
-            }
-            ?>
-
-            var data = google.visualization.arrayToDataTable(<?php echo json_encode($data, JSON_NUMERIC_CHECK); ?>);
-
-            var options = {
-                title: 'Testimonials Ratings'
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-            chart.draw(data, options);
-        }
-    </script>
-
     <script>
         document.getElementById('logout-button').addEventListener('click', function() {
             // Redirect to the logout page
             window.location.href = 'logout.php'; // Change 'logout.php' to the actual path of your logout script
         });
     </script>
-
-
-
-
 
 </body>
 

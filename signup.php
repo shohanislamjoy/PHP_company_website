@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($stmt->execute()) {
         $message = "Registration successful!";
+        header('Location: login.php');
     } else {
         $message = "Error: " . $stmt->error;
     }
@@ -56,7 +57,7 @@ $conn->close();
                                 <div class="card-body p-5">
                                     <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
-                                    <form action="register.php" method="post">
+                                    <form action="signup.php" method="post">
 
                                         <div class="form-outline mb-4">
                                             <input type="text" id="name" class="form-control form-control-lg" name="name" required />

@@ -80,9 +80,10 @@ $result = $conn->query($sql);
 		<aside class="main-sidebar sidebar-dark-primary elevation-4">
 			<!-- Brand Logo -->
 			<a href="./index.php" class="brand-link">
-				<img src="frontend/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-
+				<img src="frontend/img/logo_1.jpg" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+				<span class="brand-text font-weight-light">Battery Low Interactive</span>
 			</a>
+
 			<!-- Sidebar -->
 			<div class="sidebar">
 				<!-- Sidebar user (optional) -->
@@ -107,7 +108,7 @@ $result = $conn->query($sql);
 						</li>
 
 						<li class="nav-item">
-							<a href="users.php" class="nav-link">
+							<a href="show_users_admin.php" class="nav-link">
 								<i class="nav-icon  fas fa-users"></i>
 								<p>Users</p>
 							</a>
@@ -180,8 +181,8 @@ $result = $conn->query($sql);
 						<div class="col-lg-4 col-6">
 							<div class="small-box card">
 								<div class="inner">
-									<h3>1000 Taka</h3>
-									<p>Total Sale</p>
+									<h3>9000000 Taka</h3>
+									<p>Total Revenue</p>
 								</div>
 								<div class="icon">
 									<i class="ion ion-person-add"></i>

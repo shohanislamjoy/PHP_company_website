@@ -14,7 +14,7 @@ if ($result->num_rows > 0) {
         <div class="swiper-slide">
             <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                <img src="" class="testimonial-img" alt="">
+                    <img src="" class="testimonial-img" alt="">
                     <h3>' . $row["name"] . '</h3>
                     <h4>' . $row["occupation"] . '</h4>
                     <div class="stars">';
@@ -25,8 +25,9 @@ if ($result->num_rows > 0) {
         echo '
                     </div>
                     <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    ' . $row["message"] . '<i class="bi bi-quote quote-icon-right"></i></p> 
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        ' . $row["message"] . '<i class="bi bi-quote quote-icon-right"></i>
+                    </p> 
                 </div>
             </div>
         </div>
