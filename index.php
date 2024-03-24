@@ -179,24 +179,6 @@ include('login_check.php');
     <main id="main">
 
 
-        <!-- ======= project Section ======= -->
-        <section id="projects" class="projects">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-header">
-                    <h2>Projects</h2>
-                    <p>Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione ea sunt quis dolorem dolore earum</p>
-                </div>
-
-                <div class="row gy-4">
-                    <?php include('show_projects.php'); ?>
-
-
-                </div>
-
-            </div>
-        </section>
-        <!-- End project Section -->
 
         <!-- ======= Services Section ======= -->
         <section id="services" class="services section-bg">
@@ -289,6 +271,28 @@ include('login_check.php');
             </div>
         </section>
         <!-- End Services Section -->
+
+
+
+        <!-- ======= project Section ======= -->
+        <section id="projects" class="projects">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>Projects</h2>
+                    <p>Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione ea sunt quis dolorem dolore earum</p>
+                </div>
+
+                <div class="row gy-4">
+                    <?php include('show_projects.php'); ?>
+
+
+                </div>
+
+            </div>
+        </section>
+        <!-- End project Section -->
+
 
 
 
