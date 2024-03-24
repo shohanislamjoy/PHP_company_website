@@ -189,74 +189,8 @@ include('login_check.php');
                 </div>
 
                 <div class="row gy-4">
+                    <?php include('show_projects.php'); ?>
 
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card-item">
-                            <div class="row">
-                                <div class="col-xl-5">
-                                    <div class="card-bg" style="background-image: url(frontend/img/project-1.jpg);"></div>
-                                </div>
-                                <div class="col-xl-7 d-flex align-items-center">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Eligendi omnis sunt veritatis.</h4>
-                                        <p>Fuga in dolorum et iste et culpa. Commodi possimus nesciunt modi voluptatem placeat deleniti adipisci. Cum delectus doloribus non veritatis. Officia temporibus illo magnam. Dolor eos et.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card Item -->
-
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-item">
-                            <div class="row">
-                                <div class="col-xl-5">
-                                    <div class="card-bg" style="background-image: url(frontend/img/project-2.jpg);"></div>
-                                </div>
-                                <div class="col-xl-7 d-flex align-items-center">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Possimus ut sed velit assumenda</h4>
-                                        <p>Sunt deserunt maiores voluptatem autem est rerum perferendis rerum blanditiis. Est laboriosam qui iste numquam laboriosam voluptatem architecto. Est laudantium sunt at quas aut hic. Eum dignissimos.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card Item -->
-
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card-item">
-                            <div class="row">
-                                <div class="col-xl-5">
-                                    <div class="card-bg" style="background-image: url(frontend/img/project-3.jpg);"></div>
-                                </div>
-                                <div class="col-xl-7 d-flex align-items-center">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Error beatae dolor inventore aut</h4>
-                                        <p>Dicta porro nobis. Velit cum in. Nesciunt dignissimos enim molestiae facilis numquam quae quaerat ipsam omnis. Neque debitis ipsum at architecto officia laboriosam odit. Ut sunt temporibus nulla culpa.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card Item -->
-
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card-item">
-                            <div class="row">
-                                <div class="col-xl-5">
-                                    <div class="card-bg" style="background-image: url(frontend/img/project-4.jpg);"></div>
-                                </div>
-                                <div class="col-xl-7 d-flex align-items-center">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Expedita voluptas ut ut nesciunt</h4>
-                                        <p>Aut est quidem doloremque voluptatem magnam quis excepturi vero quia. Eum eos doloremque architecto illo at beatae dolore. Fugiat suscipit et sint ratione dolores. Aut aliquid ea dolores libero nobis.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card Item -->
 
                 </div>
 
@@ -270,7 +204,7 @@ include('login_check.php');
 
                 <div class="section-header">
                     <h2>Services</h2>
-                    <p>Voluptatem quibusdam ut ullam perferendis repellat non ut consequuntur est eveniet deleniti fignissimos eos quam</p>
+                    <p>We are the first and foremost exponents of AR and VR technologies in Bangladesh . we work in Web, app and game development as well as creative marketing is also our forte, Just check our works section for validation.</p>
                 </div>
 
                 <div class="row gy-4">
@@ -278,10 +212,10 @@ include('login_check.php');
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="service-item  position-relative">
                             <div class="icon">
-                                <i class="fa-solid fa-mountain-city"></i>
+                                <i class="fa-regular fa-lightbulb"></i>
                             </div>
-                            <h3>Nesciunt Mete</h3>
-                            <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+                            <h3>Web Development</h3>
+                            <p>Websites are the prerequisite of almost anything in present world. A website symbolizes the very identity of something. Since the days of working as freelancers, we have taken part in the development of many websites. These include an array of static and dynamic websites for a variety of different purposes.</p>
                             <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
@@ -290,10 +224,10 @@ include('login_check.php');
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="service-item position-relative">
                             <div class="icon">
-                                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+                                <i class="fa-solid fa-gamepad"></i>
                             </div>
-                            <h3>Eosle Commodi</h3>
-                            <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
+                            <h3>GAME DEVELOPMENT</h3>
+                            <p>Game development has been our comfort zone and ultimate strength. Starting from traditional mobile games, we went on building PC platform games and won awards with them. We introduced new technologies like AR and VR in their full potential in the game industry of Bangladesh.</p>
                             <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
@@ -302,10 +236,11 @@ include('login_check.php');
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="service-item position-relative">
                             <div class="icon">
-                                <i class="fa-solid fa-compass-drafting"></i>
+
+                                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
                             </div>
-                            <h3>Ledo Markt</h3>
-                            <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
+                            <h3>CREATIVE MARKETING</h3>
+                            <p>As a creative agency, we help transform corporations into icons. Brands into heroes. Companies into stories worth telling. What we do goes far beyond branding identity, and taps into the very DNA that makes your offering special.</p>
                             <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
@@ -316,8 +251,8 @@ include('login_check.php');
                             <div class="icon">
                                 <i class="fa-solid fa-trowel-bricks"></i>
                             </div>
-                            <h3>Asperiores Commodit</h3>
-                            <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+                            <h3>INVENTORY MANAGEMENT</h3>
+                            <p>Any company having its own products need an inventory. Any modern system or company should have its own inventory management system. Our expertise in this sector has enabled us to build easy to access and secured inventory management systems.</p>
                             <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
@@ -326,10 +261,10 @@ include('login_check.php');
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
                         <div class="service-item position-relative">
                             <div class="icon">
-                                <i class="fa-solid fa-helmet-safety"></i>
+                                <i class="fa-solid fa-gears"></i>
                             </div>
-                            <h3>Velit Doloremque</h3>
-                            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+                            <h3>ERP</h3>
+                            <p>Enterprise Resource Planning software is one basic need for any business now-a-days. We understand the need of a simple and in-depth ERP solution system. To address the different kinds of needs of different business organizations, we provide custom ERP solutions which sooths them best.</p>
                             <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
@@ -338,14 +273,16 @@ include('login_check.php');
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
                         <div class="service-item position-relative">
                             <div class="icon">
-                                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+                                <i class="fa-solid fa-compass-drafting"></i>
+
                             </div>
-                            <h3>Dolori Architecto</h3>
-                            <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+                            <h3>APPLICATION DEVELOPMENT</h3>
+                            <p>Starting with our in house application, we have worked on a number of applications of corporate clients and several competitions. From generating idea to planning and all the way to finish implementation is done by us.</p>
                             <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                     <!-- End Service Item -->
+
 
                 </div>
 

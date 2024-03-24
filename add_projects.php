@@ -3,7 +3,9 @@ include('connection.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$project_name = $_POST['project_name'];
+	$project_link = $_POST['project_link'];
 	$description = $_POST['description'];
+
 
 	// File Upload Handling
 	$image_url = '';
@@ -21,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	}
 
 	// Insert Data into the Database
-	$sql = "INSERT INTO projects (project_name, description, image_url) VALUES ('$project_name', '$description', '$image_url')";
+	$sql = "INSERT INTO projects (project_name, description, image_url, website_link) VALUES ('$project_name', '$description', '$image_url','$project_link')";
 
 	if ($conn->query($sql) === TRUE) {
 		$successMessage = "project added successfully!";
@@ -260,8 +262,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				<div class="container mt-5">
 
 					<form action="add_projects.php" method="POST" enctype="multipart/form-data">
-						<label for="project_name">project Name</label>
+						<label for="project_name">Project Name</label>
 						<input type="text" name="project_name" required><br>
+
+						<label for="project_link">Project Link</label>
+						<input type="text" name="project_link" required><br>
+
 
 						<label for="description">Description</label>
 						<textarea name="description" required></textarea><br>
