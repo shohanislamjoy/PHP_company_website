@@ -11,9 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO contact (name, email, message) VALUES ('$name', '$email', '$message')";
 
     if ($conn->query($sql) === TRUE) {
-        // Set session variable for success message
-        session_start();
-        $_SESSION['success_message'] = "Your message has been received successfully. Thank you!";
         // Redirect to avoid resubmission on page refresh
         header('Location: index.php');
         exit();

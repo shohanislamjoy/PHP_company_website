@@ -150,37 +150,37 @@ $result = $conn->query($sql);
 
             <div class="container mt-5">
                 <!-- reviwers -->
+                <h3>Pie Chart Of review ratings:</h>
+                    <div class="piechart m-4" id="piechart" style="height: 500px; width: 100%;"></div>
+                    <h4>Review Messages:</h4>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Occupation</th>
+                                    <th>Rating</th>
+                                    <th>Message</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                while ($row = $result->fetch_assoc()) {
+                                    echo '<tr>';
+                                    echo '<td>' . $row["name"] . '</td>';
+                                    echo '<td>' . $row["occupation"] . '</td>';
+                                    echo '<td>' . $row["rating"] . '</td>';
+                                    echo '<td>' . $row["message"] . '</td>';
+                                    echo '<td><a href="delete_review.php?id=' . $row["id"] . '">Delete</a></td>';
+                                    echo '</tr>';
+                                }
 
-                <div class="piechart m-4" id="piechart" style="height: 500px; width: 100%;"></div>
 
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Occupation</th>
-                                <th>Rating</th>
-                                <th>Message</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            while ($row = $result->fetch_assoc()) {
-                                echo '<tr>';
-                                echo '<td>' . $row["name"] . '</td>';
-                                echo '<td>' . $row["occupation"] . '</td>';
-                                echo '<td>' . $row["rating"] . '</td>';
-                                echo '<td>' . $row["message"] . '</td>';
-                                echo '<td><a href="delete_review.php?id=' . $row["id"] . '">Delete</a></td>';
-                                echo '</tr>';
-                            }
-
-
-                            ?>
-                        </tbody>
-                    </table>
-                </div>
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
 
 
             </div>
@@ -189,6 +189,10 @@ $result = $conn->query($sql);
 
         </div>
         <!-- /.content-wrapper -->
+
+
+
+
         <footer class="main-footer">
 
             <strong>Copyright &copy; Battery Low Interactive All rights reserved.
@@ -253,7 +257,8 @@ $result = $conn->query($sql);
             var data = google.visualization.arrayToDataTable(<?php echo json_encode($data, JSON_NUMERIC_CHECK); ?>);
 
             var options = {
-                title: 'Testimonials Ratings'
+                title: 'Testimonials Ratings',
+                is3D: true,
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('piechart'));

@@ -61,7 +61,7 @@ include('login_check.php');
                     <?php if (isset($_SESSION['user_id'])) : ?>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle d-flex align-items-center text-dark col-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="frontend/img/avatar.png" alt="Dashboard" class="mr-1" style="max-height: 40px;">
+                                <img src="frontend/img/avatar-3814049_640.png" alt="Dashboard" class="mr-1" style="max-height: 60px; border-radius: 40%;">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-3">
                                 <li>
@@ -134,7 +134,7 @@ include('login_check.php');
                         </li>
                     <?php else : ?>
                         <li>
-                            <a href="login.php" class="nav-link d-flex align-items-center text-dark col-3"><img src="frontend/img/avatar.png" alt="Login" class="mr-1" style="max-height: 40px;">LogIn</a>
+                            <a href="login.php" class="nav-link d-flex align-items-center text-dark col-3"><img src="frontend/img/avatar-3814049_640.png" alt="Dashboard" class="mr-1" style="max-height: 70px; border-radius: 50%;">LogIn</a>
                         </li>
                     <?php endif; ?>
                 </ul>
@@ -143,6 +143,8 @@ include('login_check.php');
         </div>
     </header>
     <!-- End Header -->
+
+
 
 
     <!-- ======= Hero Section ======= -->
@@ -282,7 +284,7 @@ include('login_check.php');
 
                 <div class="section-header">
                     <h2>Projects</h2>
-                    <p>Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione ea sunt quis dolorem dolore earum</p>
+                    <p>We have an array of in house products along with custom made products for clients — home and abroad.</p>
                 </div>
 
                 <div class="row gy-4">
@@ -294,9 +296,6 @@ include('login_check.php');
             </div>
         </section>
         <!-- End project Section -->
-
-
-
 
         <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials section-bg">
@@ -320,30 +319,24 @@ include('login_check.php');
         <!-- End Testimonials Section -->
 
 
-
         <!-- ======= contact form ======= -->
         <section id="contact" class="contact section-bg">
             <div class="container">
-
                 <div class="row justify-content-between gy-4">
-
                     <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up">
                         <div class="content">
-                            <h3>About Us</h3>
-                            <p>One of the first and foremost exponents of AR and VR technologies in Bangladesh. Web, app and game development as well as creative marketing is also our forte.
+                            <h3>Contact Us</h3>
+                            <p>One of the first and foremost exponents of AR and VR technologies in Bangladesh. Web, app and game development as well as creative marketing is also our forte.</p>
                             <p>We make sure that our products and services enhance your identity in the professional world.</p>
                         </div>
                     </div>
-
                     <div class="col-lg-5" data-aos="fade">
                         <!-- Alert message -->
                         <div id="alertMessage" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
-                            <strong>Success!</strong> Your message has been recived successfully. Thank you!
+                            <strong>Success!</strong> Your message has been received successfully. Thank you!
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
-
                         <form id="quoteForm" action="submit_contact.php" method="post" class="php-email-form">
-                            <h3>Contact Us</h3>
                             <div class="row gy-3">
                                 <div class="col-md-12">
                                     <input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
@@ -355,15 +348,13 @@ include('login_check.php');
                                     <textarea class="form-control" id="message" name="message" rows="6" placeholder="Message" required></textarea>
                                 </div>
                                 <div class="col-md-12 text-center">
-                                    <button type="submit">Send A Message</button>
+                                    <button type="submit" id="submitButton">Send A Message</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                     <!-- End Quote Form -->
-
                 </div>
-
             </div>
         </section>
         <!-- End contact form Section -->

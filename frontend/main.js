@@ -254,41 +254,33 @@ function clearFormFields() {
     document.getElementById("message").value = "";
 }
 
-
-
-
 document.getElementById("quoteForm").addEventListener("submit", function(event) {
-    // Prevent default form submission
-    event.preventDefault();
+    event.preventDefault(); // Prevent default form submission
 
     // Fetch form data
     let formData = new FormData(this);
 
-    // Submit form data via AJAX
+    // Submit form data via AJAX (you can replace this with your AJAX submission code)
     fetch(this.action, {
             method: 'POST',
             body: formData
         })
         .then(response => response.text())
         .then(data => {
-            // Clear form fields
-            clearFormFields();
-
-            // Show alert message
+            // Show alert message if the response is successful
             document.getElementById("alertMessage").style.display = "block";
 
             // Hide alert message after 5 seconds
             setTimeout(function() {
                 document.getElementById("alertMessage").style.display = "none";
             }, 5000);
+
+            // Clear form fields
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
         })
         .catch(error => {
             console.error('Error:', error);
         });
 });
-
-function clearFormFields() {
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
-}
