@@ -246,3 +246,49 @@ function closeModal() {
     var modal = document.getElementById('reviewModal');
     modal.style.display = 'none';
 }
+
+// Function to clear form fields
+function clearFormFields() {
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+}
+
+
+
+
+document.getElementById("quoteForm").addEventListener("submit", function(event) {
+    // Prevent default form submission
+    event.preventDefault();
+
+    // Fetch form data
+    let formData = new FormData(this);
+
+    // Submit form data via AJAX
+    fetch(this.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            // Clear form fields
+            clearFormFields();
+
+            // Show alert message
+            document.getElementById("alertMessage").style.display = "block";
+
+            // Hide alert message after 5 seconds
+            setTimeout(function() {
+                document.getElementById("alertMessage").style.display = "none";
+            }, 5000);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+});
+
+function clearFormFields() {
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+}
