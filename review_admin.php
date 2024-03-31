@@ -78,12 +78,6 @@ $result = $conn->query($sql);
             </ul>
         </nav>
         <!-- /.navbar -->
-
-
-
-
-
-
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
@@ -128,7 +122,7 @@ $result = $conn->query($sql);
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages.html" class="nav-link">
+                            <a href="adminLogin.php" class="nav-link">
                                 <i class="nav-icon  far fa-file-alt"></i>
                                 <p>Pages</p>
                             </a>
@@ -139,6 +133,7 @@ $result = $conn->query($sql);
             </div>
             <!-- /.sidebar -->
         </aside>
+
 
 
 
