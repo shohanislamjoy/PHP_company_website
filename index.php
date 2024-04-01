@@ -61,7 +61,7 @@ include('login_check.php');
                     <?php if (isset($_SESSION['user_id'])) : ?>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle d-flex align-items-center text-dark col-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="frontend/img/avatar-3814049_640.png" alt="Dashboard" class="mr-1" style="max-height: 60px; border-radius: 40%;">
+                                <img src="frontend/img/avatar-3814049_640.png" alt="Dashboard" class="mr-1" style="max-height: 60px; border-radius:40%;">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-3">
                                 <li>
@@ -134,7 +134,7 @@ include('login_check.php');
                         </li>
                     <?php else : ?>
                         <li>
-                            <a href="login.php" class="nav-link d-flex align-items-center text-dark col-3"><img src="frontend/img/avatar-3814049_640.png" alt="Dashboard" class="mr-1" style="max-height: 70px; border-radius: 50%;">LogIn</a>
+                            <a href="login.php" class="nav-link d-flex align-items-center text-dark col-3"><img src="frontend/img/avatar-3814049_640.png" alt="Dashboard" class="mr-1" style="max-height: 60px; border-radius: 40%;"></a>
                         </li>
                     <?php endif; ?>
                 </ul>
